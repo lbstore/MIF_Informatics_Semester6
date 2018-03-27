@@ -1,0 +1,5 @@
+#!/bin/sh 
+#SBATCH -p short
+#SBATCH -n35
+#SBATCH -C alpha
+make run np=35

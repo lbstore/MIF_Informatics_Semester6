@@ -1,0 +1,2 @@
+rm -f mpiExe
+mpicc -o mpiExe mergeSort.c
