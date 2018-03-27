@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="32cm" height="23cm" viewBox="216 99 640 457" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="294" y="228" width="486" height="145"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="537" y="304.4">
+      <tspan x="537" y="304.4"></tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="326.762" y="258" width="161.15" height="93"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="326.762" y="258" width="161.15" height="93"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="407.337" y="308.4">
+      <tspan x="407.337" y="308.4">DNT</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="611.026" y="259" width="116.975" height="94"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="611.026" y="259" width="116.975" height="94"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="669.513" y="309.9">
+      <tspan x="669.513" y="309.9">CPPN</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="611.026" y1="306" x2="498.911" y2="304.634"/>
+    <polygon style="fill: #000000" points="498.972,299.634 488.912,304.512 498.85,309.634 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="498.972,299.634 488.912,304.512 498.85,309.634 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="553.5" y="469" width="249" height="86"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="553.5" y="469" width="249" height="86"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="678" y="515.9">
+      <tspan x="678" y="515.9">Genomų mutatorius ir kryžmintojas</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="217.7" y="465" width="239.5" height="88"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="217.7" y="465" width="239.5" height="88"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="337.45" y="512.9">
+      <tspan x="337.45" y="512.9">Genomų įvertintojas ir rūšiuotojas</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="407.337" y1="351" x2="343.199" y2="455.622"/>
+    <polygon style="fill: #000000" points="338.936,453.009 337.973,464.147 347.462,458.235 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="338.936,453.009 337.973,464.147 347.462,458.235 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="386" y="413">
+    <tspan x="386" y="413">Pajėgumas</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="347" y="100" width="169" height="53"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="347" y="100" width="169" height="53"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="431.5" y="130.4">
+      <tspan x="431.5" y="130.4">Aplinka</tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="473.75" y1="153" x2="450.28" y2="247.325"/>
+    <polygon style="fill: #000000" points="445.428,246.118 447.866,257.03 455.133,248.533 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="445.428,246.118 447.866,257.03 455.133,248.533 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="473" y="201">
+    <tspan x="473" y="201">Būsena</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="367.049" y1="258" x2="413.182" y2="163.875"/>
+    <polygon style="fill: #000000" points="417.672,166.075 417.583,154.895 408.692,161.674 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="417.672,166.075 417.583,154.895 408.692,161.674 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="319" y="212">
+    <tspan x="319" y="212">Elgesys</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="457.2" y1="509" x2="542.505" y2="511.657"/>
+    <polygon style="fill: #000000" points="542.35,516.655 552.5,511.969 542.661,506.66 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="542.35,516.655 552.5,511.969 542.661,506.66 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="464" y="497">
+    <tspan x="464" y="497">Įvertinimas</tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="675.652" y1="468.009" x2="670.1" y2="363.984"/>
+    <polygon style="fill: #000000" points="675.093,363.718 669.567,353.999 665.107,364.251 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="675.093,363.718 669.567,353.999 665.107,364.251 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="703" y="423">
+    <tspan x="703" y="423">Įtaka naujai generacijai</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="508.3" y="283.3">
+    <tspan x="508.3" y="283.3">Generuojamas</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="707.5" y="248">
+    <tspan x="707.5" y="248">Genomas</tspan>
+  </text>
+</svg>

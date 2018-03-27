@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="13cm" height="5cm" viewBox="326 230 241 92" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="328" y1="248" x2="425" y2="248"/>
+    <polygon style="fill: #000000" points="425,253 435,248 425,243 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="425,253 435,248 425,243 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="328" y1="268" x2="425" y2="268"/>
+    <polygon style="fill: #000000" points="425,273 435,268 425,263 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="425,273 435,268 425,263 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="374" y="242">
+    <tspan x="374" y="242">x1</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="374" y="262">
+    <tspan x="374" y="262">y1</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="440" y="240" width="60" height="81"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="440" y="240" width="60" height="81"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="470" y="284.4">
+      <tspan x="470" y="284.4"></tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="500" y1="284" x2="553" y2="284"/>
+    <polygon style="fill: #000000" points="553,289 563,284 553,279 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="553,289 563,284 553,279 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="512" y="276">
+    <tspan x="512" y="276">Reikšmė</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="344" y="216">
+    <tspan x="344" y="216"></tspan>
+  </text>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="328" y1="288" x2="425" y2="288"/>
+    <polygon style="fill: #000000" points="425,293 435,288 425,283 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="425,293 435,288 425,283 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="328" y1="308" x2="425" y2="308"/>
+    <polygon style="fill: #000000" points="425,313 435,308 425,303 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="425,313 435,308 425,303 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="374" y="282">
+    <tspan x="374" y="282">x2</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="374" y="302">
+    <tspan x="374" y="302">y2</tspan>
+  </text>
+</svg>

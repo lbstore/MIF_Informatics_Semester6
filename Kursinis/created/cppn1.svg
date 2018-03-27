@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="13cm" height="6cm" viewBox="327 203 257 106" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="328" y1="248" x2="425" y2="248"/>
+    <polygon style="fill: #000000" points="425,253 435,248 425,243 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="425,253 435,248 425,243 "/>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="328" y1="300" x2="425" y2="300"/>
+    <polygon style="fill: #000000" points="425,305 435,300 425,295 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="425,305 435,300 425,295 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="372" y="240">
+    <tspan x="372" y="240">X</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="372" y="292">
+    <tspan x="372" y="292">Y</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="436" y="236" width="60" height="72"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="436" y="236" width="60" height="72"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="466" y="275.9">
+      <tspan x="466" y="275.9"></tspan>
+    </text>
+  </g>
+  <g>
+    <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="496" y1="272" x2="545" y2="272"/>
+    <polygon style="fill: #000000" points="545,277 555,272 545,267 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="545,277 555,272 545,267 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="528" y="260">
+    <tspan x="528" y="260">Reikšmė</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:serif;font-style:normal;font-weight:normal" x="344" y="216">
+    <tspan x="344" y="216"></tspan>
+  </text>
+</svg>
