@@ -1,0 +1,8 @@
+## Keyboard
+
+kbd.c uses [Keyboard Scan Codes: Set 1][1]. Sectoins `Scan Codes` and `Make Codes,
+Break Codes, and Typematic Repeat` in [The PS/2 Keyboard Interface][2] help the 
+understanding of the code.
+
+[1]: http://www.computer-engineering.org/ps2keyboard/scancodes1.html
+[2]: http://www.computer-engineering.org/ps2keyboard/

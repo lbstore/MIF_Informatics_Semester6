@@ -1,0 +1,20 @@
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\bin\Debug\RealAndVirtualMachine.exe.config
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\bin\Debug\RealAndVirtualMachine.exe
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\bin\Debug\RealAndVirtualMachine.pdb
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.csprojResolveAssemblyReference.cache
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\GUI\MainWindow.baml
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\GUI\MainWindow.g.cs
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\App.g.cs
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine_MarkupCompile.cache
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.g.resources
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.Properties.Resources.resources
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.csproj.GenerateResource.Cache
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.exe
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.pdb
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\GUI\VirtualMachinesTab.baml
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\GUI\VirtualMachinesTab.g.cs
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\GeneratedInternalTypeHelper.g.cs
+e:\lukas\documents\visual studio 2012\Projects\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine_MarkupCompile.lref
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\6) semestras\Operacinės sistemos\Pratybos\Pratybų 2 užduotis\RealAndVirtualMachine\RealAndVirtualMachine\bin\Debug\RealAndVirtualMachine.exe.config
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\6) semestras\Operacinės sistemos\Pratybos\Pratybų 2 užduotis\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\6) semestras\Operacinės sistemos\Pratybos\Pratybų 2 užduotis\RealAndVirtualMachine\RealAndVirtualMachine\obj\Debug\RealAndVirtualMachine.pdb

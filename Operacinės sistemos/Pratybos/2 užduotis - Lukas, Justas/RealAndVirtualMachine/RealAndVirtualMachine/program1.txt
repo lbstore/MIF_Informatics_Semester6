@@ -1,0 +1,15 @@
+//programos eilutës ilgis negali bûti ilgesnis negu 4 simboliai!
+
+//$ simbolis programos kode reiðkia, kad $ reiksme bus pakeista á adresà rodantá á atitinkamà duomenø eilutæ
+// pvz.: jeigu pirmà kartà $ panaudota su komanda RD$ - nuskait tai nuskaitys pirmà duomenø eilutæ á steko virðûnæ
+$AMJ
+LD$
+LD$
+ADD
+PRTS
+//jeigu pateikiami skaitiniai duomenys, tai 16-tainës sistemos pagrindu, t.y. 0..F
+$DTA
+166
+212
+FFF
+$STO

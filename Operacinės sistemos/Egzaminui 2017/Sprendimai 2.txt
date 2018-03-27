@@ -1,0 +1,93 @@
+1. Kokia reikšme igys bendrasis semaforas D, užsiblokavus abiem procesams P1 ir P2?
+
+SEMAPHORE A, B, C, D, E
+A = B = C = D = 0; E = 3;
+P1: BEGIN
+             L1:
+	V(B);
+	P(C);
+	V(A);
+	P(D)
+           GOTO L1;
+      END
+
+AND
+
+P2: BEGIN
+             L2:
+	V(D);
+	P(B);
+	V(C);
+	P(A);
+	V(D);
+	P(E);
+           GOTO L2;
+END
+
+
+Semaforu reiksmiu seka:
+A	B	C	D	E
+0	0	0	0	3
+0	1	0	0	3
+0	1	0	1	3
+0	0	0	1	3
+0	0	1	1	3
+0	0	0	1	3
+1	0	0	1	3
+1	0	0	0	3
+1	1	0	0	3
+0	1	0	0	3
+0	1	0	1	3
+0	1	0	1	2
+0	1	0	2	2
+0	0	0	2	2
+0	0	1	2	2
+0	0	0	2	2
+1	0	0	2	2
+1	0	0	1	2
+1	1	0	1	2
+0	1	0	1	2
+0	1	0	2	2
+0	1	0	2	1
+0	1	0	3	1
+0	0	0	3	1
+0	0	1	3	1
+0	0	0	3	1
+1	0	0	3	1
+1	0	0	2	1
+1	1	0	2	1
+0	1	0	2	1
+0	1	0	3	1
+0	1	0	3	0
+0	1	0	4	0
+0	0	0	4	0
+0	0	1	4	0
+0	0	0	4	0
+1	0	0	4	0
+1	0	0	3	0
+1	1	0	3	0
+0	1	0	3	0
+0	1	0	4	0
+
+
+ATS: D=4;
+
+2)Puslapines organizacijos polisegmentines virtualios atmintes, kurioje puslapio dydis 64KB, 
+o maksimalus segmentu skaicius yra 64, 4GB erdves virtualus adresas 12345678 yra atvaizduojamas i 
+absoliutu adresa 3EDC5678 vieno GB fizini adresu erdveje. Adresai uzrasyti sesioliktaineje sistemoje. 
+Schematiskai siu adresu atvaizdavimo mechanizma, nurodant reikiamus registrus, lenteles, atminties lauku adresus bei reiksmes. 
+
+
+s (poslinkis segmentu lentelej) = is max segmentu skaiciaus: 64 = 2^6 --> 6 pirmi bitai
+p (poslinkis puslapiu lentelej) = like 10 viduriniu bitu
+l (poslinkis puslapyje) = is psl dydzio: 64KB = 2^16 --> 4 paskutiniai skaiciai
+
+VA: 0001|0010|0011|0100|0101|0110|0111|1000 (12345678)
+
+s = 000100 = 4
+p = 1000110100 = 234h
+l = 0101011001111000 = 5678h
+
+Dar sita formule parasyt turbut reiktu:
+[ [SLR+s] + p ] * bloko dydis  + l = 3EDC5678            // blokas = puslapis
+[ [SLR + 4] + 234h ] * 2^16 + 5678h = 3EDC5678

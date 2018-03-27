@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="bin">
+        <in>cat.c</in>
+        <in>dup2_test.c</in>
+        <in>echo.c</in>
+        <in>forktest.c</in>
+        <in>grep.c</in>
+        <in>init.c</in>
+        <in>kill.c</in>
+        <in>ln.c</in>
+        <in>ls.c</in>
+        <in>mkdir.c</in>
+        <in>rm.c</in>
+        <in>sh.c</in>
+        <in>stressfs.c</in>
+        <in>usertests.c</in>
+        <in>wc.c</in>
+        <in>zombie.c</in>
+      </df>
+      <df name="include">
+        <in>asm.h</in>
+        <in>buf.h</in>
+        <in>defs.h</in>
+        <in>elf.h</in>
+        <in>fcntl.h</in>
+        <in>file.h</in>
+        <in>fs.h</in>
+        <in>kbd.h</in>
+        <in>memlayout.h</in>
+        <in>mmu.h</in>
+        <in>mp.h</in>
+        <in>param.h</in>
+        <in>proc.h</in>
+        <in>spinlock.h</in>
+        <in>stat.h</in>
+        <in>syscall.h</in>
+        <in>traps.h</in>
+        <in>types.h</in>
+        <in>user.h</in>
+        <in>x86.h</in>
+      </df>
+      <df name="lib">
+        <in>printf.c</in>
+        <in>ulib.c</in>
+        <in>umalloc.c</in>
+        <in>usys.S</in>
+      </df>
+      <df name="sys">
+        <in>bio.c</in>
+        <in>bootasm.S</in>
+        <in>bootmain.c</in>
+        <in>console.c</in>
+        <in>entry.S</in>
+        <in>entryother.S</in>
+        <in>exec.c</in>
+        <in>file.c</in>
+        <in>fs.c</in>
+        <in>ide.c</in>
+        <in>initcode.S</in>
+        <in>ioapic.c</in>
+        <in>kalloc.c</in>
+        <in>kbd.c</in>
+        <in>lapic.c</in>
+        <in>log.c</in>
+        <in>main.c</in>
+        <in>memide.c</in>
+        <in>mp.c</in>
+        <in>picirq.c</in>
+        <in>pipe.c</in>
+        <in>proc.c</in>
+        <in>spinlock.c</in>
+        <in>string.c</in>
+        <in>swtch.S</in>
+        <in>syscall.c</in>
+        <in>sysfile.c</in>
+        <in>sysproc.c</in>
+        <in>timer.c</in>
+        <in>trap.c</in>
+        <in>trapasm.S</in>
+        <in>uart.c</in>
+        <in>vm.c</in>
+      </df>
+      <df name="tools">
+        <in>mkfs.c</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

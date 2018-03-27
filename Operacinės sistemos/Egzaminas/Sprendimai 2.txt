@@ -1,0 +1,19 @@
+2)Puslapines organizacijos polisegmentines virtualios atmintes, kurioje puslapio dydis 64KB, 
+o maksimalus segmentu skaicius yra 64, 4GB erdves virtualus adresas 12345678 yra atvaizduojamas i 
+absoliutu adresa 3EDC5678 vieno GB fizini adresu erdveje. Adresai uzrasyti sesioliktaineje sistemoje. 
+Schematiskai siu adresu atvaizdavimo mechanizma, nurodant reikiamus registrus, lenteles, atminties lauku adresus bei reiksmes. 
+
+
+s (poslinkis segmentu lentelej) = is max segmentu skaiciaus: 64 = 2^6 --> 6 pirmi bitai
+p (poslinkis puslapiu lentelej) = like 10 viduriniu bitu
+l (poslinkis puslapyje) = is psl dydzio: 64KB = 2^16 --> 4 paskutiniai skaiciai
+
+VA: 0001|0010|0011|0100|0101|0110|0111|1000 (12345678)
+
+s = 000100 = 4
+p = 1000110100 = 234h
+l = 0101011001111000 = 5678h
+
+Dar sita formule parasyt turbut reiktu:
+[ [SLR+s] + p ] * bloko dydis  + l = 3EDC5678            // blokas = puslapis
+[ [SLR + 4] + 234h ] * 2^16 + 5678h = 3EDC5678

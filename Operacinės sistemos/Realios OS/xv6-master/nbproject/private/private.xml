@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/bio.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/vm.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/bin/sh.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/tools/sleep1.p</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/console.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/lib/umalloc.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/entryother.S</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/lib/printf.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/entry.S</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/lib/usys.S</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/exec.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/uart.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/main.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/kalloc.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/picirq.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/tools/vectors.pl</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/include/x86.h</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/Makefile</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/timer.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/spinlock.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/tools/spinp</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/sys/proc.c</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/include/proc.h</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/include/spinlock.h</file>
+            <file>file:/mnt/Extra-Space/Dev/OS/xv6-master/lib/ulib.c</file>
+        </group>
+    </open-files>
+</project-private>

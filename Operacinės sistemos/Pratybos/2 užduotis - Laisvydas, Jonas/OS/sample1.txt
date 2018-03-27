@@ -1,0 +1,41 @@
+DATA
+0 b "Enter a digit", 10, 13, 0      
+4 b "Enter another digit", 10, 13, 0
+12 w 0                              
+30 b " is equal to ", 0             
+40 b " is greater than ", 0         
+50 b " is less than ", 0            
+255 b "end", 0                      
+256 b "star"                        
+257 b "t", 0, 0, 0                  
+512 w dup, 256, 0                   
+
+CODE        ;
+PUTD 0
+GETD 512    ;768
+PUSH 512    ;
+TOP 11
+PUTD 4
+GETD 512
+PUSH 512
+TOP 10
+PUTD 11
+SUB
+
+JZ 781
+JP 783
+JN 785
+PUTD 30 ;781
+JMP 786
+PUTD 40 ;783
+JMP 786
+PUTD 50 ;785
+PUSH 10 ;786
+TOP 11
+PUTD 11
+HALT
+
+        
+    
+
+

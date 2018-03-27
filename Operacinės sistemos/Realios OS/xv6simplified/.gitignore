@@ -1,0 +1,12 @@
+*.asm
+*.d
+*.o
+*.sym
+_*
+kernel
+xv6.img
+vectors.S
+bootblock
+fmt
+mkfs
+nbproject

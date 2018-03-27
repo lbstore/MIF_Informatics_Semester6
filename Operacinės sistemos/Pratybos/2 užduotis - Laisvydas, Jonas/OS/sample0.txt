@@ -1,0 +1,8 @@
+DATA
+0 w "FOOBAR"
+6 b "GOAL", 10, 13, 0
+8 w 0
+9 b dup, 12, 70
+CODE   
+PUTD 6
+HALT

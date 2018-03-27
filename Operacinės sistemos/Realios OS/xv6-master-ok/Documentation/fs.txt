@@ -1,0 +1,46 @@
+# Inode and block Locking
+
+There are two level of locking in xv6 file system. One is at inode level. The 
+other is at block level.
+
+## Inode
+Inode has a refernce count keeping its references.
+
+Inode methods:
+ - iget: get a in-memory inode
+ - ilock: set the busy bit and read dinode content from disk
+ - iupdate: write dinode content to disk
+ - iunlock: clear the busy bit
+ - iput: drop reference to the inode
+ - iunlockput: unlock then put
+
+Inode 0 is used as a sentinel value to indicate null or no inodes.
+http://stackoverflow.com/questions/2099121/why-do-inode-numbers-start-from-1-and-not-0
+
+## Block
+Block buffer is a doubly-linked list.
+
+Block methods:
+
+ - bget only called by bread
+ - bread
+ - bwrite
+ - brelease
+
+Even for a writing, bget must be first called. The reason is that the data 
+transfer unit between file system and disk is the size of a disk block (512 
+bytes). Only if the write occupies a whole disk, bget is unneeded. But if only 
+some bytes of the block are written. For example, the first 2 bytes are written. 
+The content written to a disk block should be new 2 byte followed by the old 
+content from byte 2 to byte 511. So a bget is needed here.  
+
+-----------------
+|0|1|2|.....|511|
+-----------------
+
+bget is not needed for a write updating the whole block.
+During file system normal operation, superblock is readonly. So superblock can 
+be cached.
+
+inode number starts from 1 since 0 value of inum in dirent means free directory 
+entry.

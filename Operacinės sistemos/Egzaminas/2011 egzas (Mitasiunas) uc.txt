@@ -1,0 +1,14 @@
+2011.06-kažkelintą.
+
+Buvo du klausimai, apie susiję su semaforais.
+
+1. Kaip su semaforais realizuoti PP(x).
+
+Atsakymas:
+BOOLEAN PROCEDURE PP(BOOLEAN var x);
+ BEGIN
+   PP:=x;
+   x:= TRUE;
+ END;
+
+2. Semaforų primityvai operacinėje sistemoje. (Ten kažkas apie kurti / naikinti procesą ir pan. kiek jis man aiškino po egzo).

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="arch">
+        <df name="x86">
+          <df name="include">
+            <df name="asm">
+              <in>atomic.h</in>
+              <in>gdt.h</in>
+              <in>idt.h</in>
+              <in>io.h</in>
+              <in>irq.h</in>
+              <in>irqflags.h</in>
+              <in>isrs.h</in>
+              <in>limits.h</in>
+              <in>multiboot.h</in>
+              <in>page.h</in>
+              <in>processor.h</in>
+              <in>stddef.h</in>
+              <in>string.h</in>
+              <in>syscall.h</in>
+              <in>tasks.h</in>
+              <in>tasks_types.h</in>
+              <in>tss.h</in>
+              <in>vga.h</in>
+            </df>
+          </df>
+          <df name="kernel">
+            <in>entry.asm</in>
+            <in>gdt.c</in>
+            <in>idt.c</in>
+            <in>irq.c</in>
+            <in>isrs.c</in>
+            <in>processor.c</in>
+            <in>string32.asm</in>
+            <in>tasks.c</in>
+            <in>timer.c</in>
+            <in>vga.c</in>
+          </df>
+          <df name="mm">
+            <in>page.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="config">
+      </df>
+      <df name="documentation">
+        <df name="text">
+        </df>
+        <df name="tmpl">
+        </df>
+      </df>
+      <df name="include">
+        <df name="eduos">
+          <in>config.h</in>
+          <in>errno.h</in>
+          <in>malloc.h</in>
+          <in>memory.h</in>
+          <in>processor.h</in>
+          <in>semaphore.h</in>
+          <in>semaphore_types.h</in>
+          <in>spinlock.h</in>
+          <in>spinlock_types.h</in>
+          <in>stdarg.h</in>
+          <in>stddef.h</in>
+          <in>stdio.h</in>
+          <in>stdlib.h</in>
+          <in>string.h</in>
+          <in>syscall.h</in>
+          <in>tasks.h</in>
+          <in>tasks_types.h</in>
+          <in>time.h</in>
+          <in>vma.h</in>
+        </df>
+      </df>
+      <df name="kernel">
+        <in>main.c</in>
+        <in>syscall.c</in>
+        <in>tasks.c</in>
+      </df>
+      <df name="libkern">
+        <in>divdi3.c</in>
+        <in>moddi3.c</in>
+        <in>printf.c</in>
+        <in>qdivrem.c</in>
+        <in>quad.h</in>
+        <in>sprintf.c</in>
+        <in>stdio.c</in>
+        <in>string.c</in>
+        <in>udivdi3.c</in>
+        <in>umoddi3.c</in>
+      </df>
+      <df name="mm">
+        <in>malloc.c</in>
+        <in>memory.c</in>
+        <in>vma.c</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

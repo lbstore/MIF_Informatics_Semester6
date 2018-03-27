@@ -1,0 +1,12 @@
+TODO: Break out kernel only headers from this directory. It appears only the following are 
+used in userspace:
+
+  fcntl.h
+  fs.h
+  memlayout.h
+  param.h
+  stat.h
+  syscall.h
+  traps.h
+  types.h
+  user.h
