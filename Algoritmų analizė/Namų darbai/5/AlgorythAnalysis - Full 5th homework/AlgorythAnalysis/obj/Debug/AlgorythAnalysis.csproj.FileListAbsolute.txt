@@ -1,0 +1,29 @@
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.exe.config
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.exe
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.pdb
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.csprojResolveAssemblyReference.cache
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\MainWindow.baml
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\MainWindow.g.cs
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\App.g.cs
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis_MarkupCompile.cache
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.g.resources
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.Properties.Resources.resources
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.csproj.GenerateResource.Cache
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.exe
+e:\lukas\documents\visual studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\3\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.exe.config
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\3\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\3\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.exe.config
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\bin\Debug\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.csprojResolveAssemblyReference.cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\MainWindow.baml
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\MainWindow.g.cs
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\App.g.cs
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis_MarkupCompile.cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.g.resources
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.Properties.Resources.resources
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Debug\AlgorythAnalysis.csproj.GenerateResource.Cache

@@ -1,0 +1,168 @@
+﻿<Window x:Class="AlgorythAnalysis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Algoritmų analizė 5 Namų darbas" Height="650" Width="555">
+    <Grid Background="#FFDEDEDE" >
+
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                <Label Content="Algoritmų analizės 5 namų darbo uždaviniams spręsti :)" VerticalAlignment="Center"/>
+                <Button Content="Link - dėstytojo puslapis" VerticalAlignment="Center" Height="30" Margin="13,5,0,0" Padding="5,0,5,0" Foreground="#FFF9F9F9" Background="#FF58BAE8" BorderBrush="#FFBDCBEA" Click="LinkToTeachersPage_OnClick"></Button>
+                <Button Content="About" VerticalAlignment="Center" Height="30" Margin="13,5,0,0" Padding="5,0,5,0" Foreground="#FFF9F9F9" Background="#FF58BAE8" BorderBrush="#FFBDCBEA" Click="AboutWindow_OnClick"></Button>
+            </StackPanel>
+            <TabControl Grid.Column="0" Grid.Row="1" Background="{x:Null}">
+                <TabItem Header="Floyd-Warshall" IsSelected="True">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="1" Grid.Column="0">
+                                <Label Content="Iveskite matricos duomenis atskirtus per kablelį:"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox x:Name="MatrixInputTextBox" Margin="10,10,0,10" Padding="5"   Text="  0,   1, inf, inf,   3&#x0a;inf,   0,   3,   3,   8&#x0a;inf, inf,   0,   1,  -5&#x0a;inf, inf,   2,   0, inf&#x0a;inf, inf, inf,   4,   0&#x0a;" MinWidth="200" MinHeight="100" Background="White" AcceptsReturn="True" AcceptsTab="True" />
+                                    <Grid Margin="10,10,0,0" Height="Auto" VerticalAlignment="Top">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0" Grid.Row="0" Content="variantas"/>
+                                        <ComboBox x:Name="VariantComboBox" Grid.Column="1" Grid.Row="0" SelectionChanged="ComboBox_SelectionChanged">
+                                            <ComboBoxItem Tag="0,  7,  9,  Inf,  14,  Inf&#x0a;4,  0,  -2,  10,  1,  7&#x0a;3,  7,  0,  Inf,  3,  10&#x0a;1,  8,  9,  0,  1,  9&#x0a;4,  Inf,  2,  3,  0,  Inf&#x0a;2,  2,  5,  4,  Inf,  0">1</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  8,  6,  Inf,  15,  Inf&#x0a;7,  0,  -2,  9,  9,  13&#x0a;7,  8,  0,  9,  6,  7&#x0a;9,  8,  7,  0,  Inf,  15&#x0a;4,  Inf,  3,  9,  0,  Inf&#x0a;4,  8,  2,  10,  Inf,  0">2</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  13,  Inf,  10,  9,  Inf&#x0a;1,  0,  -2,  10,  8,  12&#x0a;9,  10,  0,  5,  Inf,  10&#x0a;Inf,  1,  7,  0,  1,  Inf &#x0a;5,  4,  Inf,  9,  0,  9&#x0a;7,  7,  5,  Inf,  4,  0">3</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  Inf,  14,  13,  15,  Inf&#x0a;4,  0,  -2,  4,  10,  6&#x0a;10,  Inf,  0,  9,  5,  10&#x0a;Inf,  8,  1,  0,  6,  Inf&#x0a;Inf,  7,  7,  4,  0,  15&#x0a;3,  1,  5,  Inf,  10,  0">4</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  12,  6,  Inf,  6,  Inf&#x0a;10,  0,  -2,  1,  3,  6&#x0a;7,  3,  0,  10,  Inf,  Inf&#x0a;Inf,  2,  2,  0,  2,  14&#x0a;6,  Inf,  5,  10,  0,  10&#x0a;9,  1,  Inf,  9,  5,  0">5</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  13,  Inf,  14,  10,  Inf&#x0a;1,  0,  -2,  5,  3,  15&#x0a;5,  8,  0,  Inf,  7,  Inf&#x0a;3,  Inf,  8,  0,  9,  8&#x0a;9,  8,  4,  6,  0,  9&#x0a;6,  10,  Inf,  3,  4,  0">6</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  8,  8,  Inf,  15,  Inf&#x0a;Inf,  0,  -2,  5,  8,  11&#x0a;8,  9,  0,  4,  2,  9&#x0a;5,  Inf,  9,  0,  4,  13&#x0a;1,  7,  8,  Inf,  0,  Inf&#x0a;1,  6,  4,  8,  Inf,  0">7</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  12,  14,  7,  12,  Inf&#x0a;7,  0,  -2,  Inf,  1,  12&#x0a;Inf,  6,  0,  8,  6,  Inf&#x0a;9,  5,  8,  0,  Inf,  9&#x0a;2,  Inf,  9,  3,  0,  6&#x0a;7,  7,  Inf,  4,  1,  0">8</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  8,  11,  7,  6,  Inf&#x0a;1,  0,  -2,  4,  2,  10&#x0a;Inf,  9,  0,  8,  9,  Inf&#x0a;10,  4,  3,  0,  6,  9&#x0a;2,  Inf,  2,  8,  0,  7&#x0a;2,  5,  Inf,  4,  2,  0">9</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  7,  8,  6,  15,  Inf&#x0a;10,  0,  -2,  5,  8,  14&#x0a;6,  10,  0,  1,  2,  11&#x0a;2,  10,  7,  0,  7,  11&#x0a;6,  3,  6,  Inf,  0,  7&#x0a;6,  9,  6,  6,  2,  0">10</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  6,  8,  9,  9,  Inf&#x0a;2,  0,  -2,  2,  6,  11&#x0a;Inf,  7,  0,  7,  8,  11&#x0a;7,  10,  6,  0,  8,  7&#x0a;10,  Inf,  6,  6,  0,  10&#x0a;1,  6,  6,  2,  5,  0">11</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  Inf,  13,  6,  10,  Inf&#x0a;8,  0,  -2,  10,  10,  9&#x0a;9,  Inf,  0,  3,  7,  9&#x0a;5,  Inf,  8,  0,  2,  Inf&#x0a;10,  5,  1,  4,  0,  15&#x0a;8,  4,  4,  Inf,  10,  0">12</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  Inf,  9,  6,  8,  Inf&#x0a;7,  0,  -2,  6,  10,  10&#x0a;Inf,  7,  0,  2,  4,  6&#x0a;6,  9,  1,  0,  5,  8&#x0a;10,  3,  Inf,  8,  0,  7&#x0a;5,  5,  1,  3,  2,  0">13</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  11,  15,  12,  14,  Inf&#x0a;1,  0,  -2,  4,  8,  9&#x0a;6,  10,  0,  Inf,  7,  Inf&#x0a;6,  9,  6,  0,  Inf,  8&#x0a;6,  10,  10,  2,  0,  14&#x0a;4,  4,  Inf,  3,  9,  0">14</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  8,  Inf,  9,  7,  Inf&#x0a;6,  0,  -2,  10,  Inf,  8&#x0a;2,  4,  0,  7,  7,  10&#x0a;5,  Inf,  3,  0,  3,  Inf&#x0a;Inf,  9,  8,  3,  0,  6&#x0a;3,  3,  5,  Inf,  1,  0">15</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  Inf,  13,  9,  9,  Inf&#x0a;Inf,  0,  -2,  5,  7,  12&#x0a;5,  6,  0,  Inf,  7,  14&#x0a;9,  1,  Inf,  0,  1,  Inf&#x0a;Inf,  7,  6,  3,  0,  9&#x0a;4,  7,  9,  Inf,  4,  0">16</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  11,  13,  15,  7,  Inf&#x0a;Inf,  0,  -2,  6,  4,  Inf&#x0a;5,  9,  0,  Inf,  7,  13&#x0a;10,  Inf,  5,  0,  9,  12&#x0a;6,  1,  5,  Inf,  0,  8&#x0a;7,  Inf,  8,  7,  3,  0">17</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  14,  11,  9,  14,  Inf&#x0a;4,  0,  -2,  7,  6,  6&#x0a;9,  Inf,  0,  10,  10,  10&#x0a;8,  7,  9,  0,  Inf,  Inf&#x0a;7,  7,  9,  Inf,  0,  15&#x0a;8,  1,  5,  Inf,  10,  0">18</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  7,  6,  11,  8,  Inf&#x0a;Inf,  0,  -2,  5,  8,  8&#x0a;8,  Inf,  0,  7,  4,  12&#x0a;7,  5,  8,  0,  6,  6&#x0a;6,  7,  6,  8,  0,  Inf&#x0a;5,  3,  7,  1,  Inf,  0">19</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  7,  10,  15,  Inf,  Inf&#x0a;8,  0,  -2,  Inf,  10,  9&#x0a;6,  3,  0,  Inf,  2,  Inf&#x0a;Inf,  8,  10,  0,  5,  7&#x0a;3,  2,  4,  1,  0,  10&#x0a;6,  4,  Inf,  2,  5,  0">20</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  11,  Inf,  6,  6,  Inf&#x0a;1,  0,  -2,  2,  7,  7&#x0a;8,  8,  0,  6,  7,  13&#x0a;1,  7,  Inf,  0,  3,  Inf&#x0a;8,  9,  5,  6,  0,  15&#x0a;5,  2,  8,  Inf,  10,  0">21</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  13,  11,  15,  Inf,  Inf&#x0a;8,  0,  -2,  8,  9,  15&#x0a;Inf,  3,  0,  5,  10,  6&#x0a;6,  Inf,  8,  0,  8,  9&#x0a;1,  2,  8,  4,  0,  Inf&#x0a;3,  10,  1,  4,  Inf,  0">22</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  Inf,  10,  15,  8,  Inf&#x0a;9,  0,  -2,  Inf,  6,  6&#x0a;3,  6,  0,  8,  Inf,  10&#x0a;5,  1,  5,  0,  3,  6&#x0a;2,  1,  9,  6,  0,  6&#x0a;Inf,  1,  5,  1,  1,  0">23</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  12,  13,  10,  13,  Inf&#x0a;9,  0,  -2,  5,  Inf,  10&#x0a;3,  6,  0,  4,  Inf,  15&#x0a;8,  Inf,  10,  0,  8,  13&#x0a;3,  1,  6,  Inf,  0,  10&#x0a;Inf,  5,  10,  8,  5,  0">24</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  11,  11,  6,  9,  Inf&#x0a;2,  0,  -2,  10,  4,  12&#x0a;7,  4,  0,  4,  2,  12&#x0a;3,  4,  1,  0,  Inf,  12&#x0a;2,  10,  1,  9,  0,  7&#x0a;4,  7,  7,  7,  2,  0">25</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  15,  Inf,  11,  13,  Inf&#x0a;5,  0,  -2,  10,  6,  12&#x0a;4,  5,  0,  Inf,  4,  Inf&#x0a;4,  3,  10,  0,  8,  11&#x0a;2,  Inf,  7,  1,  0,  13&#x0a;2,  7,  Inf,  6,  8,  0">26</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  6,  9,  15,  Inf,  Inf&#x0a;6,  0,  -2,  8,  5,  Inf&#x0a;8,  2,  0,  9,  4,  9&#x0a;Inf,  6,  10,  0,  10,  14&#x0a;9,  9,  10,  5,  0,  14&#x0a;6,  Inf,  4,  9,  9,  0">27</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  14,  13,  Inf,  11,  Inf&#x0a;10,  0,  -2,  Inf,  2,  9&#x0a;Inf,  6,  0,  1,  10,  8&#x0a;3,  8,  10,  0,  9,  7&#x0a;2,  5,  3,  10,  0,  7&#x0a;Inf,  4,  3,  2,  2,  0">28</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  8,  14,  11,  Inf,  Inf&#x0a;4,  0,  -2,  9,  Inf,  11&#x0a;4,  6,  0,  9,  1,  15&#x0a;6,  Inf,  10,  0,  6,  Inf&#x0a;7,  6,  4,  Inf,  0,  13&#x0a;5,  6,  10,  Inf,  8,  0">29</ComboBoxItem>
+                                            <ComboBoxItem Tag="0,  6,  Inf,  7,  14,  Inf&#x0a;3,  0,  -2,  1,  10,  Inf&#x0a;3,  Inf,  0,  8,  8,  15&#x0a;3,  4,  8,  0,  5,  6&#x0a;3,  7,  8,  Inf,  0,  15&#x0a;8,  Inf,  10,  1,  10,  0">30</ComboBoxItem>
+                                        </ComboBox>
+                                        <Label Grid.Column="0" Grid.Row="1" Content="iš viršūnės"/>
+                                        <Label Grid.Column="0" Grid.Row="2" Content="į viršūnę"/>
+                                        <TextBox x:Name="IsVirsunesInput" Grid.Column="1" Grid.Row="1" Text="1" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="30" TextAlignment="Center" KeyDown="RetunButtonPressed"/>
+                                        <TextBox x:Name="IVirsuneInput" Grid.Column="1" Grid.Row="2" Text="4" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="30" TextAlignment="Center" KeyDown="RetunButtonPressed"/>
+                                        <Button Grid.Row="3" Grid.ColumnSpan="2"  Content="Skaičiuoti" Height="30" VerticalAlignment="Top" Width="100" HorizontalAlignment="Center" Padding="5,0,5,0" Foreground="#FFF9F9F9" Background="#FF58BAE8" BorderBrush="#FFBDCBEA" Click="Button_OnClick"></Button>
+                                    </Grid>
+
+
+                                </StackPanel>
+
+                            </StackPanel>
+                        </Grid>
+                        <TextBox x:Name="OutputTextBox" HorizontalScrollBarVisibility="Auto" Grid.Row="1" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" VerticalScrollBarVisibility="Auto" FontFamily="Courier New"/>
+                        <StackPanel Grid.Row="2" Orientation="Horizontal">
+                            <Label x:Name ="ResultLabel"/>
+                            <TextBlock x:Name="ResulTextBlock"  Margin="10,0,0,0" MinWidth="200" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Prim, Kruskal">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Įveskite matricos duomenis atskirtus per kablelį"/>
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" >                            
+                            <TextBox x:Name="PrimKruskalMatrixInputTextBox" Margin="10,10,0,10" Padding="5"   Text="  0,   1, inf, inf,   3&#x0a;inf,   0,   3,   3,   8&#x0a;inf, inf,   0,   1,  -5&#x0a;inf, inf,   2,   0, inf&#x0a;inf, inf, inf,   4,   0&#x0a;" MinWidth="200" MinHeight="100" Background="White" AcceptsReturn="True" AcceptsTab="True" />
+                            <Grid Margin="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" Content="variantas"/>
+                                <ComboBox x:Name="PrimmKruskalVariantComboBox" Grid.Column="1" Grid.Row="0" SelectionChanged="PrimKruskallComboBox_SelectionChanged">
+                                    <ComboBoxItem Tag="0, 2, 16, 10, 3, 6, 5, 7&#x0a;2, 0, 6, Inf, 12, 18, 14, 14&#x0a;16, 6, 0, 15, 9, 7, 1, 10&#x0a;10, Inf, 15, 0, 8, 5, 9, 15&#x0a;3, 12, 9, 8, 0, 15, Inf, 13&#x0a;6, 18, 7, 5, 15, 0, 15, 14&#x0a;5, 14, 1, 9, Inf, 15, 0, 18&#x0a;7, 14, 10, 15, 13, 14, 18, 0">1</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 1, 10, Inf, 11, 5, 17, 16&#x0a;1, 0, 14, 19, 17, Inf, Inf, 4&#x0a;10, 14, 0, 15, Inf, 20, 15, 5&#x0a;Inf, 19, 15, 0, 20, 20, 10, Inf&#x0a;11, 17, Inf, 20, 0, 4, 18, 10&#x0a;5, Inf, 20, 20, 4, 0, 2, 10&#x0a;17, Inf, 15, 10, 18, 2, 0, 5&#x0a;16, 4, 5, Inf, 10, 10, 5, 0">2</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 12, 15, 19, 6, 19, 7, 2&#x0a;12, 0, 2, 6, 15, Inf, 13, 2&#x0a;15, 2, 0, 5, 12, 8, 18, Inf&#x0a;19, 6, 5, 0, 16, 2, Inf, 15&#x0a;6, 15, 12, 16, 0, 14, 1, 20&#x0a;19, Inf, 8, 2, 14, 0, 12, 16&#x0a;7, 13, 18, Inf, 1, 12, 0, 15&#x0a;2, 2, Inf, 15, 20, 16, 15, 0">3</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 2, 4, 1, 18, 1, 15, 12&#x0a;2, 0, 13, Inf, -1, 3, 18, 3&#x0a;4, 13, 0, 3, 11, 14, 16, 9&#x0a;1, Inf, 3, 0, Inf, Inf, 15, 4&#x0a;18, -1, 11, Inf, 0, 18, Inf, Inf&#x0a;1, 3, 14, Inf, 18, 0, 3, 20&#x0a;15, 18, 16, 15, Inf, 3, 0, 1&#x0a;12, 3, 9, 4, Inf, 20, 1, 0">4</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 20, 6, 11, 12, 20, 5, 3&#x0a;20, 0, 17, 2, Inf, 15, 8, 16&#x0a;6, 17, 0, 3, 13, 12, 12, 11&#x0a;11, 2, 3, 0, 3, 10, 17, Inf&#x0a;12, Inf, 13, 3, 0, Inf, Inf, 4&#x0a;20, 15, 12, 10, Inf, 0, 1, 6&#x0a;5, 8, 12, 17, Inf, 1, 0, 13&#x0a;3, 16, 11, Inf, 4, 6, 13, 0">5</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 12, 2, 5, 16, 19, 19, Inf&#x0a;12, 0, 14, 3, Inf, 15, 1, 12&#x0a;2, 14, 0, 6, 2, 4, 10, 15&#x0a;5, 3, 6, 0, 20, 6, 9, 15&#x0a;16, Inf, 2, 20, 0, 11, Inf, 2&#x0a;19, 15, 4, 6, 11, 0, 7, 6&#x0a;19, 1, 10, 9, Inf, 7, 0, 5&#x0a;Inf, 12, 15, 15, 2, 6, 5, 0">6</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 2, 12, 5, 4, 20, 6, 16&#x0a;2, 0, 7, 14, 4, 10, Inf, 1&#x0a;12, 7, 0, -1, 8, 11, 16, 9&#x0a;5, 14, -1, 0, 13, Inf, 17, 3&#x0a;4, 4, 8, 13, 0, 11, 13, 8&#x0a;20, 10, 11, Inf, 11, 0, 15, 10&#x0a;6, Inf, 16, 17, 13, 15, 0, 12&#x0a;16, 1, 9, 3, 8, 10, 12, 0">7</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 4, 3, 1, Inf, 16, 11, 5&#x0a;4, 0, 10, 13, 5, -1, 16, Inf&#x0a;3, 10, 0, 6, 11, 9, 13, 2&#x0a;1, 13, 6, 0, 1, Inf, 18, 6&#x0a;Inf, 5, 11, 1, 0, 13, 1, 3&#x0a;16, -1, 9, Inf, 13, 0, 9, 13&#x0a;11, 16, 13, 18, 1, 9, 0, 4&#x0a;5, Inf, 2, 6, 3, 13, 4, 0">8</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 14, 3, 7, 4, 8, 14, 17&#x0a;14, 0, 14, 11, Inf, 14, 4, 16&#x0a;3, 14, 0, 8, 5, 16, 19, 7&#x0a;7, 11, 8, 0, 4, 17, 17, 3&#x0a;4, Inf, 5, 4, 0, 9, 8, 19&#x0a;8, 14, 16, 17, 9, 0, 1, 13&#x0a;14, 4, 19, 17, 8, 1, 0, Inf&#x0a;17, 16, 7, 3, 19, 13, Inf, 0">9</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 5, 15, 11, 8, 12, 15, 9&#x0a;5, 0, 13, 12, 8, 6, 17, 6&#x0a;15, 13, 0, 9, 13, 14, Inf, 20&#x0a;11, 12, 9, 0, Inf, 7, 12, 2&#x0a;8, 8, 13, Inf, 0, 13, 10, 11&#x0a;12, 6, 14, 7, 13, 0, 4, 18&#x0a;15, 17, Inf, 12, 10, 4, 0, 14&#x0a;9, 6, 20, 2, 11, 18, 14, 0">10</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 14, 19, 19, 15, 9, 15, 10&#x0a;14, 0, 16, 19, 7, 17, 17, Inf&#x0a;19, 16, 0, 1, 7, Inf, 1, 4&#x0a;19, 19, 1, 0, Inf, 12, 9, 6&#x0a;15, 7, 7, Inf, 0, 19, 7, -1&#x0a;9, 17, Inf, 12, 19, 0, Inf, 17&#x0a;15, 17, 1, 9, 7, Inf, 0, 16&#x0a;10, Inf, 4, 6, -1, 17, 16, 0">11</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 10, 15, 16, 20, 3, 17, 18&#x0a;10, 0, 13, 17, 16, 5, -1, 6&#x0a;15, 13, 0, 19, 2, 3, 11, 16&#x0a;16, 17, 19, 0, Inf, 1, 15, 19&#x0a;20, 16, 2, Inf, 0, Inf, 3, 18&#x0a;3, 5, 3, 1, Inf, 0, 16, 2&#x0a;17, -1, 11, 15, 3, 16, 0, Inf&#x0a;18, 6, 16, 19, 18, 2, Inf, 0">12</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 10, 8, 18, 17, 16, 16, Inf&#x0a;10, 0, Inf, 20, 10, 12, 8, 11&#x0a;8, Inf, 0, 9, 5, 13, 12, 7&#x0a;18, 20, 9, 0, 10, Inf, 6, 18&#x0a;17, 10, 5, 10, 0, 17, 17, 15&#x0a;16, 12, 13, Inf, 17, 0, 9, 8&#x0a;16, 8, 12, 6, 17, 9, 0, 12&#x0a;Inf, 11, 7, 18, 15, 8, 12, 0">13</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 4, 3, Inf, 14, 3, Inf, 19&#x0a;4, 0, 13, 12, 13, Inf, 18, 1&#x0a;3, 13, 0, 16, 4, 2, 2, 6&#x0a;Inf, 12, 16, 0, 10, 7, 20, 20&#x0a;14, 13, 4, 10, 0, 4, 14, 16&#x0a;3, Inf, 2, 7, 4, 0, 7, 11&#x0a;Inf, 18, 2, 20, 14, 7, 0, 14&#x0a;19, 1, 6, 20, 16, 11, 14, 0">14</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 11, 9, 16, 17, 13, 7, 7&#x0a;11, 0, 5, 18, 16, 6, 14, 18&#x0a;9, 5, 0, 11, 7, Inf, Inf, 8&#x0a;16, 18, 11, 0, 15, 18, 5, 4&#x0a;17, 16, 7, 15, 0, 14, 12, 10&#x0a;13, 6, Inf, 18, 14, 0, 1, Inf&#x0a;7, 14, Inf, 5, 12, 1, 0, 12&#x0a;7, 18, 8, 4, 10, Inf, 12, 0">15</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 2, 20, Inf, 17, 18, Inf, 7&#x0a;2, 0, 15, 18, 15, 6, 8, 16&#x0a;20, 15, 0, 13, 13, 5, 13, 14&#x0a;Inf, 18, 13, 0, 7, Inf, 6, 4&#x0a;17, 15, 13, 7, 0, 14, 17, 18&#x0a;18, 6, 5, Inf, 14, 0, 15, Inf&#x0a;Inf, 8, 13, 6, 17, 15, 0, 9&#x0a;7, 16, 14, 4, 18, Inf, 9, 0">16</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, -1, 8, 19, 17, 11, 3, Inf&#x0a;-1, 0, 12, 13, 18, 14, 15, 17&#x0a;8, 12, 0, 1, 14, 16, 13, 15&#x0a;19, 13, 1, 0, 1, 19, 13, 6&#x0a;17, 18, 14, 1, 0, Inf, 3, 1&#x0a;11, 14, 16, 19, Inf, 0, Inf, 2&#x0a;3, 15, 13, 13, 3, Inf, 0, 1&#x0a;Inf, 17, 15, 6, 1, 2, 1, 0">17</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 10, -1, 3, 4, 10, 19, 15&#x0a;10, 0, 18, 11, 20, 20, 10, 1&#x0a;-1, 18, 0, Inf, 10, 11, 5, Inf&#x0a;3, 11, Inf, 0, 1, 7, 2, 6&#x0a;4, 20, 10, 1, 0, 5, Inf, 8&#x0a;10, 20, 11, 7, 5, 0, 17, 7&#x0a;19, 10, 5, 2, Inf, 17, 0, 13&#x0a;15, 1, Inf, 6, 8, 7, 13, 0">18</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 11, 14, 11, 8, 11, Inf, -2&#x0a;11, 0, 17, 6, 1, 16, 6, Inf&#x0a;14, 17, 0, 14, 15, 2, 9, 9&#x0a;11, 6, 14, 0, Inf, 10, 1, 5&#x0a;8, 1, 15, Inf, 0, 5, 11, 17&#x0a;11, 16, 2, 10, 5, 0, 19, 4&#x0a;Inf, 6, 9, 1, 11, 19, 0, 17&#x0a;-2, Inf, 9, 5, 17, 4, 17, 0">19</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, Inf, 16, Inf, 7, 10, 12, 5&#x0a;Inf, 0, 10, 15, 11, 14, 11, 5&#x0a;16, 10, 0, 3, 16, 19, 14, 14&#x0a;Inf, 15, 3, 0, 6, 8, 14, Inf&#x0a;7, 11, 16, 6, 0, Inf, 15, 2&#x0a;10, 14, 19, 8, Inf, 0, 14, 9&#x0a;12, 11, 14, 14, 15, 14, 0, 15&#x0a;5, 5, 14, Inf, 2, 9, 15, 0">20</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 9, 17, 6, 11, Inf, Inf, 6&#x0a;9, 0, Inf, 6, Inf, 11, 12, 15&#x0a;17, Inf, 0, 17, 14, 16, 17, 12&#x0a;6, 6, 17, 0, 8, 7, 12, 4&#x0a;11, Inf, 14, 8, 0, 1, 18, 18&#x0a;Inf, 11, 16, 7, 1, 0, 17, Inf&#x0a;Inf, 12, 17, 12, 18, 17, 0, 5&#x0a;6, 15, 12, 4, 18, Inf, 5, 0">21</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 12, 12, 17, 5, 3, 10, 6&#x0a;12, 0, Inf, 1, 19, 5, 16, Inf&#x0a;12, Inf, 0, 3, Inf, 11, 1, 11&#x0a;17, 1, 3, 0, 2, 19, 12, 12&#x0a;5, 19, Inf, 2, 0, 10, Inf, 19&#x0a;3, 5, 11, 19, 10, 0, 19, 18&#x0a;10, 16, 1, 12, Inf, 19, 0, 20&#x0a;6, Inf, 11, 12, 19, 18, 20, 0">22</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 3, 19, 19, 14, 14, 12, 10&#x0a;3, 0, 16, 9, 7, Inf, 3, 9&#x0a;19, 16, 0, 14, 10, 5, 14, 1&#x0a;19, 9, 14, 0, Inf, 5, 5, Inf&#x0a;14, 7, 10, Inf, 0, 11, 10, 6&#x0a;14, Inf, 5, 5, 11, 0, Inf, 16&#x0a;12, 3, 14, 5, 10, Inf, 0, 20&#x0a;10, 9, 1, Inf, 6, 16, 20, 0">23</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, Inf, 4, Inf, 20, 2, 9, Inf&#x0a;Inf, 0, 13, 14, 19, 5, 4, 17&#x0a;4, 13, 0, 5, 14, 3, 7, 11&#x0a;Inf, 14, 5, 0, 7, Inf, 6, 18&#x0a;20, 19, 14, 7, 0, 18, 1, 12&#x0a;2, 5, 3, Inf, 18, 0, Inf, 16&#x0a;9, 4, 7, 6, 1, Inf, 0, 5&#x0a;Inf, 17, 11, 18, 12, 16, 5, 0">24</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 16, 9, 13, 17, 16, 7, 4&#x0a;16, 0, 20, 10, 14, 8, 4, Inf&#x0a;9, 20, 0, 16, 11, 4, 13, 6&#x0a;13, 10, 16, 0, 10, 14, 14, 15&#x0a;17, 14, 11, 10, 0, 15, 17, 18&#x0a;16, 8, 4, 14, 15, 0, 15, 19&#x0a;7, 4, 13, 14, 17, 15, 0, 14&#x0a;4, Inf, 6, 15, 18, 19, 14, 0">25</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 15, 16, 3, 14, 9, 12, 7&#x0a;15, 0, 1, 16, Inf, 9, 13, 10&#x0a;16, 1, 0, 19, 12, 4, 6, 20&#x0a;3, 16, 19, 0, 2, 15, 15, 13&#x0a;14, Inf, 12, 2, 0, Inf, 4, Inf&#x0a;9, 9, 4, 15, Inf, 0, Inf, 12&#x0a;12, 13, 6, 15, 4, Inf, 0, 19&#x0a;7, 10, 20, 13, Inf, 12, 19, 0">26</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 16, 13, 8, Inf, 7, 5, 13&#x0a;16, 0, Inf, 12, 17, 10, 19, 17&#x0a;13, Inf, 0, 10, 1, Inf, 4, 10&#x0a;8, 12, 10, 0, 18, 18, 3, 10&#x0a;Inf, 17, 1, 18, 0, 6, 11, 14&#x0a;7, 10, Inf, 18, 6, 0, Inf, 10&#x0a;5, 19, 4, 3, 11, Inf, 0, 15&#x0a;13, 17, 10, 10, 14, 10, 15, 0">27</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 19, 8, 17, 3, 3, 11, 13&#x0a;19, 0, 4, 11, 7, 6, 11, 1&#x0a;8, 4, 0, Inf, Inf, 3, 20, 12&#x0a;17, 11, Inf, 0, 8, 4, 3, 4&#x0a;3, 7, Inf, 8, 0, 5, 5, 4&#x0a;3, 6, 3, 4, 5, 0, 11, 11&#x0a;11, 11, 20, 3, 5, 11, 0, 15&#x0a;13, 1, 12, 4, 4, 11, 15, 0">28</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 17, 8, 3, 5, 4, 9, 17&#x0a;17, 0, 5, 11, 3, 18, 5, 15&#x0a;8, 5, 0, 11, Inf, Inf, 17, 7&#x0a;3, 11, 11, 0, 3, 12, Inf, Inf&#x0a;5, 3, Inf, 3, 0, 2, 13, 8&#x0a;4, 18, Inf, 12, 2, 0, 13, 20&#x0a;9, 5, 17, Inf, 13, 13, 0, 6&#x0a;17, 15, 7, Inf, 8, 20, 1, 0">29</ComboBoxItem>
+                                    <ComboBoxItem Tag="0, 9, 13, 13, 17, 10, 7, 9&#x0a;9, 0, 11, 10, 9, 5, 18, 20&#x0a;13, 11, 0, 8, 15, 5, 5, Inf&#x0a;13, 10, 8, 0, Inf, 19, 5, 2&#x0a;17, 9, 15, Inf, 0, Inf, 17, 16&#x0a;10, 5, 5, 19, Inf, 0, Inf, 6&#x0a;7, 18, 5, 5, 17, Inf, 0, 10&#x0a;9, 20, Inf, 16, 2, 6, 10, 0">30</ComboBoxItem>
+
+                                </ComboBox>
+                                <Button Grid.Row="1" Grid.ColumnSpan="2"  Content="Skaičiuoti" Height="30" VerticalAlignment="Bottom" Width="100" HorizontalAlignment="Center" Padding="5,0,5,0" Foreground="#FFF9F9F9" Background="#FF58BAE8" BorderBrush="#FFBDCBEA" Click="PrimKruskallButton_OnClick"></Button>
+                            </Grid>
+                        </StackPanel>
+                        <TextBox x:Name="KruskallOutputTextBox" HorizontalScrollBarVisibility="Auto" Grid.Row="2" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" VerticalScrollBarVisibility="Auto" FontFamily="Courier New"/>
+                        <TextBox x:Name="PrimmOutputTextBox" HorizontalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="1" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}" VerticalScrollBarVisibility="Auto" FontFamily="Courier New"/>
+                    </Grid>
+
+
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>

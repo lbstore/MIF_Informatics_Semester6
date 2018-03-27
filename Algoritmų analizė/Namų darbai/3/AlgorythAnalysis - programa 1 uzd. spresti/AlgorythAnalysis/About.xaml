@@ -1,0 +1,31 @@
+﻿<Window x:Class="AlgorythAnalysis.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About" Height="260" Width="390" ResizeMode="NoResize">
+    <Grid Background="#FFDEDEDE">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Background="{x:Null}" Margin="10" TextWrapping="Wrap" FontSize="14" Focusable="True">
+            <Span FontSize="14">Žiauriai simple (per daug pastangų neįdėta), bet naudingas įrankis algoritmų analizės uždaviniui spręsti.</Span><LineBreak/>
+            <LineBreak/>
+            <Span FontSize="13">Dalinuosi savo sukurta medžiaga su visais,</Span><LineBreak/> 
+            ir kartu <Span Foreground="#FFFD0000"><Bold>raginu visus dalintis savo sukurta medžiaga :)</Bold></Span><LineBreak/>
+            <LineBreak/>
+            ● Įkelk savo medžiagą į 
+            <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="http://wiki.mifsa.lt/" Foreground="#FF0080FF">wiki.mifsa.lt</Hyperlink>
+             <LineBreak/>
+            ● Pasidalink su draugais bendru 
+            <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://drive.google.com/folderview?id=0B-_euk5EcBsCUUl6UkRIYWJ1RVk" Foreground="#FF0080FF">google drive</Hyperlink><LineBreak/>
+            <Span FontSize="11" xml:space="preserve">    Jeigu neturi, prieigos prie google drive, pranešk man el paštu: 
+                                                       <Span FontSize="12">informatika.mif@gmail.com</Span></Span>
+
+
+
+
+        </TextBlock>
+        <Label Grid.Row="1" Content="© Lukas Klusis, 2014"/>
+    </Grid>
+</Window>

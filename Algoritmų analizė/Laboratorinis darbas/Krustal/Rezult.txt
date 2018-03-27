@@ -1,0 +1,285 @@
+Kruskal: 100 400
+Result weight 14.249885160686727
+Time took 46.0 ms
+
+Result weight 14.249885160686727
+Time took 46.0 ms
+
+Result weight 14.249885160686727
+Time took 37.0 ms
+
+Result weight 14.249885160686727
+Time took 37.0 ms
+
+Result weight 14.249885160686727
+Time took 48.0 ms
+
+Result weight 14.249885160686727
+Time took 41.0 ms
+
+Result weight 14.249885160686727
+Time took 48.0 ms
+
+Result weight 14.249885160686727
+Time took 44.0 ms
+
+Result weight 14.249885160686727
+Time took 43.0 ms
+
+Result weight 14.249885160686727
+Time took 46.0 ms
+
+Result weight 14.249885160686727
+Time took 46.0 ms
+
+
+
+A Algoritmas: 100 400
+Weight full 14.249885160686727
+Time spent 45.0 ms
+
+Weight full 14.249885160686727
+Time spent 42.0 ms
+
+Weight full 14.249885160686727
+Time spent 59.0 ms
+
+Weight full 14.249885160686727
+Time spent 44.0 ms
+
+Weight full 14.249885160686727
+Time spent 49.0 ms
+
+Weight full 14.249885160686727
+Time spent 41.0 ms
+
+Weight full 14.249885160686727
+Time spent 37.0 ms
+
+Weight full 14.249885160686727
+Time spent 36.0 ms
+
+Weight full 14.249885160686727
+Time spent 50.0 ms
+
+Weight full 14.249885160686727
+Time spent 45.0 ms
+
+Weight full 14.249885160686727
+Time spent 43.0 ms
+
+
+
+Krustal: 2000 8000
+Result weight 281.6854907667355
+Time took 243.0 ms
+
+Result weight 281.6854907667355
+Time took 223.0 ms
+
+Result weight 281.6854907667355
+Time took 216.0 ms
+
+Result weight 281.6854907667355
+Time took 212.0 ms
+
+Result weight 281.6854907667355
+Time took 206.0 ms
+
+Result weight 281.6854907667355
+Time took 202.0 ms
+
+Result weight 281.6854907667355
+Time took 202.0 ms
+
+Result weight 281.6854907667355
+Time took 248.0 ms
+
+Result weight 281.6854907667355
+Time took 237.0 ms
+
+Result weight 281.6854907667355
+Time took 213.0 ms
+
+Result weight 281.6854907667355
+Time took 191.0 ms
+
+
+A Algorithm: 2000 8000
+Weight full 281.6854907667355
+Time spent 236.0 ms
+
+Weight full 281.6854907667355
+Time spent 243.0 ms
+
+Weight full 281.6854907667355
+Time spent 266.0 ms
+
+Weight full 281.6854907667355
+Time spent 247.0 ms
+
+Weight full 281.6854907667355
+Time spent 256.0 ms
+
+Weight full 281.6854907667355
+Time spent 262.0 ms
+
+Weight full 281.6854907667355
+Time spent 267.0 ms
+
+Weight full 281.6854907667355
+Time spent 245.0 ms
+
+Weight full 281.6854907667355
+Time spent 257.0 ms
+
+Weight full 281.6854907667355
+Time spent 259.0 ms
+
+Weight full 281.6854907667355
+Time spent 240.0 ms
+
+
+
+
+Kruskal: 10000 40000
+Result weight 1454.3421117954601
+Time took 488.0 ms
+
+Result weight 1454.3421117954601
+Time took 429.0 ms
+
+Result weight 1454.3421117954601
+Time took 502.0 ms
+
+Result weight 1454.3421117954601
+Time took 440.0 ms
+
+Result weight 1454.3421117954601
+Time took 447.0 ms
+
+Result weight 1454.3421117954601
+Time took 447.0 ms
+
+Result weight 1454.3421117954601
+Time took 514.0 ms
+
+Result weight 1454.3421117954601
+Time took 359.0 ms
+
+Result weight 1454.3421117954601
+Time took 433.0 ms
+
+Result weight 1454.3421117954601
+Time took 432.0 ms
+
+Result weight 1454.3421117954601
+Time took 437.0 ms
+
+
+
+A Algorithm: 10000 40000
+Weight full 1454.3421117954601
+Time spent 623.0 ms
+
+Weight full 1454.3421117954601
+Time spent 668.0 ms
+
+Weight full 1454.3421117954601
+Time spent 619.0 ms
+
+Weight full 1454.3421117954601
+Time spent 595.0 ms
+
+Weight full 1454.3421117954601
+Time spent 595.0 ms
+
+Weight full 1454.3421117954601
+Time spent 616.0 ms
+
+Weight full 1454.3421117954601
+Time spent 662.0 ms
+
+Weight full 1454.3421117954601
+Time spent 592.0 ms
+
+Weight full 1454.3421117954601
+Time spent 636.0 ms
+
+Weight full 1454.3421117954601
+Time spent 594.0 ms
+
+Weight full 1454.3421117954601
+Time spent 619.0 ms
+
+
+
+Kruskal: 1000000 4000000
+Result weight 14335.023368855946
+Time took 1663.0 ms
+
+Result weight 14335.023368855946
+Time took 1652.0 ms
+
+Result weight 14335.023368855946
+Time took 1742.0 ms
+
+Result weight 14335.023368855946
+Time took 1709.0 ms
+
+Result weight 14335.023368855946
+Time took 1802.0 ms
+
+Result weight 14335.023368855946
+Time took 1653.0 ms
+
+Result weight 14335.023368855946
+Time took 1629.0 ms
+
+Result weight 14335.023368855946
+Time took 1667.0 ms
+
+Result weight 14335.023368855946
+Time took 1704.0 ms
+
+Result weight 14335.023368855946
+Time took 1593.0 ms
+
+Result weight 14335.023368855946
+Time took 1935.0 ms
+
+
+
+A Algoritmas: 1000000 4000000
+Weight full 14335.023368855946
+Time spent 9910.0 ms
+
+Weight full 14335.023368855946
+Time spent 9901.0 ms
+
+Weight full 14335.023368855946
+Time spent 9826.0 ms
+
+Weight full 14335.023368855946
+Time spent 10107.0 ms
+
+Weight full 14335.023368855946
+Time spent 9896.0 ms
+
+Weight full 14335.023368855946
+Time spent 9799.0 ms
+
+Weight full 14335.023368855946
+Time spent 10344.0 ms
+
+Weight full 14335.023368855946
+Time spent 9788.0 ms
+
+Weight full 14335.023368855946
+Time spent 10541.0 ms
+
+Weight full 14335.023368855946
+Time spent 10040.0 ms
+
+Weight full 14335.023368855946
+Time spent 9967.0 ms

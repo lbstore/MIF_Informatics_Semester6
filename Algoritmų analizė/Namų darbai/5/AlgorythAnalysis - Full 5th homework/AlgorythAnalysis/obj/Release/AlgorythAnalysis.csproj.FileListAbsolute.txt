@@ -1,0 +1,40 @@
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\bin\Release\AlgorythAnalysis.exe.config
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\bin\Release\AlgorythAnalysis.exe
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\bin\Release\AlgorythAnalysis.pdb
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\MainWindow.baml
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\MainWindow.g.cs
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\App.g.cs
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis_MarkupCompile.cache
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.g.resources
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.Properties.Resources.resources
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.csproj.GenerateResource.Cache
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.exe
+e:\Lukas\Documents\Visual Studio 2012\Projects\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\bin\Release\AlgorythAnalysis.exe.config
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\bin\Release\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\bin\Release\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.csprojResolveAssemblyReference.cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\MainWindow.baml
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\MainWindow.g.cs
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\App.g.cs
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis_MarkupCompile.cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.g.resources
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.Properties.Resources.resources
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\4\AlgorythAnalysis\AlgorythAnalysis\obj\Release\AlgorythAnalysis.csproj.GenerateResource.Cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\bin\Release\AlgorythAnalysis.exe.config
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\bin\Release\AlgorythAnalysis.exe
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\bin\Release\AlgorythAnalysis.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis.csprojResolveAssemblyReference.cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\MainWindow.baml
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\MainWindow.g.cs
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\App.g.cs
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis_MarkupCompile.cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis.g.resources
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis.Properties.Resources.resources
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\AlgorythAnalysis.csproj.GenerateResource.Cache
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\About.baml
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Algoritmų analizė\Namų darbai\5\AlgorythAnalysis - floydWarshall\AlgorythAnalysis\obj\Release\About.g.cs

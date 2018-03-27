@@ -1,0 +1,14 @@
+ND0 renkates is NP-pilnu uzdaviniu sarasho (NP compendium)
+http://www.csc.kth.se/~viggo/problemlist/
+ir atsiunciate node numeri is pasirinkto uzdavinio internetinio adreso
+valdas.diciunas@mif.vu.lt
+
+Pvz. adresas
+http://www.csc.kth.se/~viggo/wwwcompendium/node45.html
+reiskia 45 uzdavini.
+
+Tikslas: isnagrineti uzdavini ir kas apie ji zinoma, pasiulyti algoritmo ideja,
+ivertinti to algoritmo sudetinguma, ispresti paprasta pavyzdi, kai pradiniu duomenu mazai. Programuoti nereikia
+
+
+
