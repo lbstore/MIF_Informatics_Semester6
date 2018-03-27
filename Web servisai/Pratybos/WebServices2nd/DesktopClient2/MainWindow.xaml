@@ -1,0 +1,182 @@
+﻿<Window x:Class="DesktopClient2.MainWindow"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+        xmlns:esriNew="http://schemas.esri.com/arcgis/runtime/2013"
+        Title="MainWindow" Height="700" Width="900"
+        x:Name="RootWindow">
+
+    <Window.Resources>
+
+        <SolidColorBrush x:Key="InfoWindowBackgroundColor" Color="#FFDAD3B3" />
+        <SolidColorBrush x:Key="InfoWindowForegroundColor" Color="White" />
+        <SolidColorBrush x:Key="InfoWindowInputBackgroundColor" Color="#99FFFFFF" />
+
+
+        <DataTemplate x:Key="NewPointInputWindow">
+            <StackPanel Grid.Column="1" Width="200" Button.Click="ButtonClick_AddNewPoint" >
+                <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" >
+                    <WrapPanel Background="{StaticResource InfoWindowBackgroundColor}" Grid.ColumnSpan="2">
+                        <Label Grid.Column="0" FontSize="15" HorizontalAlignment="Left" Content="Add new task"  Foreground="{StaticResource InfoWindowForegroundColor}" VerticalAlignment="Bottom" Padding="2,5,0,0" FontFamily="Segoe UI Light"/>
+                    </WrapPanel>
+                    <Rectangle   Height="2">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </StackPanel>
+                <Grid Grid.Row="1" MaxWidth="200" Background="{StaticResource InfoWindowBackgroundColor}"
+                      DataContext="{Binding ElementName=NewPointInfoWindow, Path=DataContext.MapPointContent}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Name" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Info" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Date" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Long" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="4" Grid.Column="0" Content="Lat" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="5" Grid.Column="0" Content="Address" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+
+                    <TextBox Grid.Row="0" Grid.Column="1" x:Name="InputBoxName" Text="{Binding Path=Name}" FontFamily="Segoe UI Light" Margin="0,2,5,2" Background="{StaticResource InfoWindowInputBackgroundColor}" TextWrapping="Wrap" />
+                    <TextBox Grid.Row="1" Grid.Column="1" x:Name="InputBoxInfo" Text="{Binding Path=Info}" FontFamily="Segoe UI Light" Margin="0,2,5,2" Background="{StaticResource InfoWindowInputBackgroundColor}" TextWrapping="Wrap" AcceptsReturn="True" />
+                    <TextBox Grid.Row="2" Grid.Column="1" x:Name="InputBoxDate" Text="{Binding Path=PublishedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}', Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,5,0" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" x:Name="InputBoxLong" Text="{Binding Path=Longtitude,StringFormat='{}{0:##0.######}', Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" TextWrapping="Wrap"  Margin="0,0,5,0" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" x:Name="InputBoxLat" Text="{Binding Path=Latitude,StringFormat='{}{0:##0.######}', Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" TextWrapping="Wrap"  Margin="0,0,5,0" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="5" Grid.Column="1" x:Name="InputBoxAddress" Text="{Binding Path=Address, Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" TextWrapping="Wrap"  Margin="0,0,5,0" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Button Grid.Row="6" Grid.Column="1" Content="Add" Height="Auto" Width="Auto" HorizontalAlignment="Left" Padding="5,0,5,1" Margin="0,5,10,10" FontFamily="Segoe UI Light" Background="#FFACA171" Foreground="White" BorderBrush="#FF7C7253"/>
+                </Grid>
+            </StackPanel>
+        </DataTemplate >
+
+        <DataTemplate x:Key="SelectedPointWindow">
+            <StackPanel Grid.Column="1" Width="200" Button.Click="ButtonClick_DeleteSelectedPoint"
+                        DataContext="{Binding ElementName=SelectedPointInfoWindow, Path=DataContext.MapPointContent}">
+                <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" >
+                    <WrapPanel Background="{StaticResource InfoWindowBackgroundColor}" Grid.ColumnSpan="2">
+                        <Label x:Name="SelectedPointName" Grid.Column="0" FontSize="15" HorizontalAlignment="Left" Content="{Binding Path=Name}"  Foreground="{StaticResource InfoWindowForegroundColor}" VerticalAlignment="Bottom" Padding="2,5,0,0" FontFamily="Segoe UI Light"/>
+                    </WrapPanel>
+                    <Rectangle   Height="2">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </StackPanel>
+                <Grid Grid.Row="1" MaxWidth="200" Background="{StaticResource InfoWindowBackgroundColor}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Content="Info" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Published by" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Date" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Long" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="4" Grid.Column="0" Content="Lat" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+                    <Label Grid.Row="5" Grid.Column="0" Content="Address" Padding="2,2,5,0" Foreground="{StaticResource InfoWindowForegroundColor}" FontFamily="Segoe UI Light"/>
+
+
+                    <TextBox  Grid.Row="0" Grid.Column="1" x:Name="SelectedPointInfo" Text="{Binding Path=Info, Mode=OneWay}"  FontFamily="Segoe UI Light" Margin="0,2,5,2"  TextWrapping="Wrap" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" x:Name="SelectedPointPublishedBy" Text="{Binding Path=UserName, Mode=OneWay}" FontFamily="Segoe UI Light" Margin="0,2,5,2"  TextWrapping="Wrap"  IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" x:Name="SelectedPointDate" Text="{Binding Path=PublishedDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}', Mode=OneWay}"  FontFamily="Segoe UI Light" VerticalAlignment="Center" Margin="0,0,5,0" TextWrapping="Wrap" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" x:Name="SelectedPointLong" Text="{Binding Path=Longtitude, StringFormat='{}{0:##0.######}', Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" Margin="0,0,5,0" TextWrapping="Wrap" IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="4" Grid.Column="1" x:Name="SelectedPointLat" Text="{Binding Path=Latitude, StringFormat='{}{0:##0.#######}',Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" Margin="0,0,5,0" TextWrapping="Wrap"  IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <TextBox Grid.Row="5" Grid.Column="1" x:Name="SelectedPointAddress" Text="{Binding Path=Address, Mode=OneWay}" FontFamily="Segoe UI Light" VerticalAlignment="Center" Margin="0,0,5,0" TextWrapping="Wrap"  IsReadOnly="True" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Button Grid.Row="6" Grid.Column="1"  Content="Delete" Height="Auto"  Width="Auto" HorizontalAlignment="Left" Padding="5,0,5,1" Margin="0,5,10,10" FontFamily="Segoe UI Light" Background="#FFACA171" Foreground="White" BorderBrush="#FF7C7253"/>
+                </Grid>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <!--<Grid.Resources>
+            <esri:LocalMapService x:Key="localMapService" Path="SDK\Samples\Data\MPKs\USCitiesStates.mpk" MaxRecords="1000000"/>
+            <esri:LocalFeatureService x:Key="localFeatureService" Path="SDK\Samples\Data\MPKs\USCitiesStates.mpk" MaxRecords="1000000"/>
+        </Grid.Resources>-->
+        <!--
+        <esriNew:MapView x:Name="MyNewMapView">
+            <esriNew:Map x:Name="MyNewMap" >
+                <esriNew:ArcGISTiledMapServiceLayer ID="BaseMap" 
+    ServiceUri="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
+            </esriNew:Map>
+        </esriNew:MapView> -->
+
+        <esri:Map x:Name="MyMap" Grid.ColumnSpan="2" UseAcceleratedDisplay="True" IsLogoVisible="False" MouseClick="MyMap_MouseClick" MouseRightButtonUp="MyMap_MouseRightButtonUp">
+            <esri:Map.Extent>
+                <esri:Envelope XMin="85939.48" YMin="5396426.04" XMax="4488712.31" YMax="8331607.92"/>
+            </esri:Map.Extent>
+
+           <!-- XMin: 85939.48 YMin: 5396426.04 XMax: 4488712.31 YMax: 8331607.92 -->
+            <!-- ArcGIS Online Tiled Basemap Layer -->
+            <esri:ArcGISTiledMapServiceLayer ID="BaseMap"  
+            Url="http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"/>
+            <!-- http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer-->
+            <esri:GraphicsLayer ID="TemporaryGraphicsLayer" />
+
+
+        </esri:Map>
+        <esri:InfoWindow x:Name="NewPointInfoWindow" MinHeight="40" MinWidth="40"
+                         DataContext="{Binding TemporarySelectionMapPoint}"
+                         Map="{Binding ElementName=MyMap}" 
+                         Background="{StaticResource InfoWindowBackgroundColor}"
+                         Padding="-6,-40,-6,-6"
+                         BorderBrush="{StaticResource InfoWindowBackgroundColor}"
+                         ContentTemplate="{StaticResource NewPointInputWindow}">
+        </esri:InfoWindow>
+        <esri:InfoWindow x:Name="SelectedPointInfoWindow" MinHeight="40" MinWidth="40" 
+                         DataContext="{Binding SelectedExistingItem}"
+                         Map="{Binding ElementName=MyMap}" 
+                         Background="{StaticResource InfoWindowBackgroundColor}"
+                         
+                         
+                         Padding="-6,-40,-6,-6"
+                         BorderBrush="{StaticResource InfoWindowBackgroundColor}"
+                         ContentTemplate="{StaticResource SelectedPointWindow}">
+        </esri:InfoWindow>
+
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                      Margin="10,10,10,0" Width="100"
+                      SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBox.Items>
+                <ComboBoxItem Content="Streets" IsSelected="True" 
+                        Tag="http://services.arcgisonline.com/arcgis/rest/services/World_Street_Map/MapServer"/>
+                <ComboBoxItem Content="Topo" 
+                        Tag="http://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer"/>
+                <ComboBoxItem Content="Imagery" 
+                        Tag="http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer"/>
+                <!-- <ComboBoxItem Content="Maps.lt"
+                             Tag="http://www.maps.lt/arcgis/rest/services/mapslt/MapServer " /> -->
+            </ComboBox.Items>
+        </ComboBox>
+    </Grid>
+</Window>
+
+
+

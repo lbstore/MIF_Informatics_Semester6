@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FacultyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="FacultyModelStoreContainer">
+          <EntitySet Name="ProgramSubjectsSet" EntityType="FacultyModel.Store.ProgramSubjectsSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StudyProgramSet" EntityType="FacultyModel.Store.StudyProgramSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StudySubjectSet" EntityType="FacultyModel.Store.StudySubjectSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TeacherSet" EntityType="FacultyModel.Store.TeacherSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserSet" EntityType="FacultyModel.Store.UserSet" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_StudyProgramProgramSubjects" Association="FacultyModel.Store.FK_StudyProgramProgramSubjects">
+            <End Role="StudyProgramSet" EntitySet="StudyProgramSet" />
+            <End Role="ProgramSubjectsSet" EntitySet="ProgramSubjectsSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySubjectProgramSubjects" Association="FacultyModel.Store.FK_StudySubjectProgramSubjects">
+            <End Role="StudySubjectSet" EntitySet="StudySubjectSet" />
+            <End Role="ProgramSubjectsSet" EntitySet="ProgramSubjectsSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeacherStudySubject" Association="FacultyModel.Store.FK_TeacherStudySubject">
+            <End Role="TeacherSet" EntitySet="TeacherSet" />
+            <End Role="StudySubjectSet" EntitySet="StudySubjectSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ProgramSubjectsSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudySubject_Id" Type="int" />
+          <Property Name="StudyProgram_Id" Type="int" />
+        </EntityType>
+        <EntityType Name="StudyProgramSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Degree" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="StudySubjectSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AutumOrSpring" Type="nvarchar(max)" />
+          <Property Name="Form" Type="nvarchar(max)" />
+          <Property Name="Teacher_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TeacherSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MidleName" Type="nvarchar(max)" />
+          <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="WorkPhone" Type="nvarchar(max)" />
+          <Property Name="MobilePhone" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UserSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="RolesID" Type="int" />
+          <Property Name="UserGuid" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_StudyProgramProgramSubjects">
+          <End Role="StudyProgramSet" Type="FacultyModel.Store.StudyProgramSet" Multiplicity="0..1" />
+          <End Role="ProgramSubjectsSet" Type="FacultyModel.Store.ProgramSubjectsSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudyProgramSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramSubjectsSet">
+              <PropertyRef Name="StudyProgram_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySubjectProgramSubjects">
+          <End Role="StudySubjectSet" Type="FacultyModel.Store.StudySubjectSet" Multiplicity="0..1" />
+          <End Role="ProgramSubjectsSet" Type="FacultyModel.Store.ProgramSubjectsSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudySubjectSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramSubjectsSet">
+              <PropertyRef Name="StudySubject_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeacherStudySubject">
+          <End Role="TeacherSet" Type="FacultyModel.Store.TeacherSet" Multiplicity="1" />
+          <End Role="StudySubjectSet" Type="FacultyModel.Store.StudySubjectSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TeacherSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudySubjectSet">
+              <PropertyRef Name="Teacher_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FacultyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ProgramSubjectsSets" EntityType="FacultyModel.ProgramSubjectsSet" />
+          <EntitySet Name="StudyProgramSets" EntityType="FacultyModel.StudyProgramSet" />
+          <EntitySet Name="StudySubjectSets" EntityType="FacultyModel.StudySubjectSet" />
+          <EntitySet Name="TeacherSets" EntityType="FacultyModel.TeacherSet" />
+          <EntitySet Name="UserSets" EntityType="FacultyModel.UserSet" />
+          <AssociationSet Name="FK_StudyProgramProgramSubjects" Association="FacultyModel.FK_StudyProgramProgramSubjects">
+            <End Role="StudyProgramSet" EntitySet="StudyProgramSets" />
+            <End Role="ProgramSubjectsSet" EntitySet="ProgramSubjectsSets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySubjectProgramSubjects" Association="FacultyModel.FK_StudySubjectProgramSubjects">
+            <End Role="StudySubjectSet" EntitySet="StudySubjectSets" />
+            <End Role="ProgramSubjectsSet" EntitySet="ProgramSubjectsSets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeacherStudySubject" Association="FacultyModel.FK_TeacherStudySubject">
+            <End Role="TeacherSet" EntitySet="TeacherSets" />
+            <End Role="StudySubjectSet" EntitySet="StudySubjectSets" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ProgramSubjectsSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="StudySubject_Id" Type="Int32" />
+          <Property Name="StudyProgram_Id" Type="Int32" />
+          <NavigationProperty Name="StudyProgramSet" Relationship="FacultyModel.FK_StudyProgramProgramSubjects" FromRole="ProgramSubjectsSet" ToRole="StudyProgramSet" />
+          <NavigationProperty Name="StudySubjectSet" Relationship="FacultyModel.FK_StudySubjectProgramSubjects" FromRole="ProgramSubjectsSet" ToRole="StudySubjectSet" />
+        </EntityType>
+        <EntityType Name="StudyProgramSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Degree" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ProgramSubjectsSets" Relationship="FacultyModel.FK_StudyProgramProgramSubjects" FromRole="StudyProgramSet" ToRole="ProgramSubjectsSet" />
+        </EntityType>
+        <EntityType Name="StudySubjectSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="AutumOrSpring" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Form" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Teacher_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProgramSubjectsSets" Relationship="FacultyModel.FK_StudySubjectProgramSubjects" FromRole="StudySubjectSet" ToRole="ProgramSubjectsSet" />
+          <NavigationProperty Name="TeacherSet" Relationship="FacultyModel.FK_TeacherStudySubject" FromRole="StudySubjectSet" ToRole="TeacherSet" />
+        </EntityType>
+        <EntityType Name="TeacherSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MidleName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Surname" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="WorkPhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MobilePhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="StudySubjectSets" Relationship="FacultyModel.FK_TeacherStudySubject" FromRole="TeacherSet" ToRole="StudySubjectSet" />
+        </EntityType>
+        <EntityType Name="UserSet">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RolesID" Type="Int32" />
+          <Property Name="UserGuid" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_StudyProgramProgramSubjects">
+          <End Role="StudyProgramSet" Type="FacultyModel.StudyProgramSet" Multiplicity="0..1" />
+          <End Role="ProgramSubjectsSet" Type="FacultyModel.ProgramSubjectsSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudyProgramSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramSubjectsSet">
+              <PropertyRef Name="StudyProgram_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySubjectProgramSubjects">
+          <End Role="StudySubjectSet" Type="FacultyModel.StudySubjectSet" Multiplicity="0..1" />
+          <End Role="ProgramSubjectsSet" Type="FacultyModel.ProgramSubjectsSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudySubjectSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProgramSubjectsSet">
+              <PropertyRef Name="StudySubject_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeacherStudySubject">
+          <End Role="TeacherSet" Type="FacultyModel.TeacherSet" Multiplicity="1" />
+          <End Role="StudySubjectSet" Type="FacultyModel.StudySubjectSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TeacherSet">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudySubjectSet">
+              <PropertyRef Name="Teacher_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FacultyModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="ProgramSubjectsSets">
+            <EntityTypeMapping TypeName="FacultyModel.ProgramSubjectsSet">
+              <MappingFragment StoreEntitySet="ProgramSubjectsSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="StudySubject_Id" ColumnName="StudySubject_Id" />
+                <ScalarProperty Name="StudyProgram_Id" ColumnName="StudyProgram_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudyProgramSets">
+            <EntityTypeMapping TypeName="FacultyModel.StudyProgramSet">
+              <MappingFragment StoreEntitySet="StudyProgramSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Degree" ColumnName="Degree" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudySubjectSets">
+            <EntityTypeMapping TypeName="FacultyModel.StudySubjectSet">
+              <MappingFragment StoreEntitySet="StudySubjectSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AutumOrSpring" ColumnName="AutumOrSpring" />
+                <ScalarProperty Name="Form" ColumnName="Form" />
+                <ScalarProperty Name="Teacher_Id" ColumnName="Teacher_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeacherSets">
+            <EntityTypeMapping TypeName="FacultyModel.TeacherSet">
+              <MappingFragment StoreEntitySet="TeacherSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MidleName" ColumnName="MidleName" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+                <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSets">
+            <EntityTypeMapping TypeName="FacultyModel.UserSet">
+              <MappingFragment StoreEntitySet="UserSet">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="RolesID" ColumnName="RolesID" />
+                <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

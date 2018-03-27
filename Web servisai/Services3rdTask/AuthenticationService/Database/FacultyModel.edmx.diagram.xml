@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21098236b6bf413ca448d4fadfe8f003" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="FacultyModel.ProgramSubjectsSet" Width="2" PointX="10.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacultyModel.StudyProgramSet" Width="1.875" PointX="3.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacultyModel.StudySubjectSet" Width="1.5" PointX="7.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacultyModel.TeacherSet" Width="1.5" PointX="5.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FacultyModel.UserSet" Width="1.5" PointX="6.25" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="FacultyModel.FK_StudyProgramProgramSubjects" ManuallyRouted="false" />
+        <AssociationConnector Association="FacultyModel.FK_StudySubjectProgramSubjects" ManuallyRouted="false" />
+        <AssociationConnector Association="FacultyModel.FK_TeacherStudySubject" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FacultyModel.FacultySet" Width="1.5" PointX="0.5" PointY="0.75" />
+        <EntityTypeShape EntityType="FacultyModel.FacultyTeacherSet" Width="1.875" PointX="2.875" PointY="0.625" />
+        <AssociationConnector Association="FacultyModel.FK_FacultyFacultyTeacher" />
+        <AssociationConnector Association="FacultyModel.FK_TeacherFacultyTeacher" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

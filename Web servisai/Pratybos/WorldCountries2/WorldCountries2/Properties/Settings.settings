@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WorldCountries2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WorldCountries2_org_oorsprong_www_CountryInfoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</Value>
+    </Setting>
+    <Setting Name="WorldCountries2_com_webservicex_www_CurrencyConvertor" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.webservicex.com/CurrencyConvertor.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

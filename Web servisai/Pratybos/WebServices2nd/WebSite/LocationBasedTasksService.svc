@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="LocationBasedTasksService" CodeBehind="~/App_Code/LocationBasedTasksService/LocationBasedTasksService.cs" %>

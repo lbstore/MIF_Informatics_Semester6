@@ -1,0 +1,7 @@
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\bin\AuthenticationService.dll
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\bin\AuthenticationService.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\obj\Debug\AuthenticationService.dll
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\obj\Debug\AuthenticationService.pdb
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\bin\EntityFramework.dll
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\bin\EntityFramework.xml
+E:\Cloud\GDrive\lukas@klusis.lt\MIF\Informatika\6 semestras\Web servisai\Services3rdTask\AuthenticationService\obj\Debug\AuthenticationService.csprojResolveAssemblyReference.cache
