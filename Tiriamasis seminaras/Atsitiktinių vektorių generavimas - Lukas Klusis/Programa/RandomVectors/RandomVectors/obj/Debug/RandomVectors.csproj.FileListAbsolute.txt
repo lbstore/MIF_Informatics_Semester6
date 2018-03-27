@@ -1,0 +1,16 @@
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\bin\Debug\RandomVectors.exe.config
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors.csprojResolveAssemblyReference.cache
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\MainWindow.baml
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\MainWindow.g.cs
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\App.g.cs
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors_MarkupCompile.cache
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors.g.resources
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors.Properties.Resources.resources
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors.csproj.GenerateResource.Cache
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\bin\Debug\RandomVectors.exe
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\bin\Debug\RandomVectors.pdb
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\bin\Debug\DataGrid2DLibrary.dll
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\bin\Debug\MathNet.Numerics.dll
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\bin\Debug\MathNet.Numerics.xml
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors.exe
+E:\Programming\Visual Studio\TiriamasisSeminaras\RandomVectors\RandomVectors\obj\Debug\RandomVectors.pdb
