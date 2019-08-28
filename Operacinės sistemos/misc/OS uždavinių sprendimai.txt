@@ -1,4 +1,4 @@
-1. Kokià reikðmæ ágys bendrasis semaforas D, uþsiblokavus abiem procesams P1 ir P2?
+1. Koki? reik?m¿ ?gys bendrasis semaforas D, u?siblokavus abiem procesams P1 ir P2?
 
 SEMAPHORE A, B, C, D, E
 A = B = C = D = 0; E = 3;
@@ -73,42 +73,42 @@ A	B	C	D	E
 ATS: D=4;
 
 
-2. VA erdvës dydis 4GB (32bit). Segmento dydis yra 1mb (20bit), VA organizuota polisegmentinës atminties principu ir yra padalinta á FFFh segmentus.
-STR = A01h, kuris reiðkia segmento numerá, nuo kurio prasideda segmentø lentelë. Puslapio dydis yra 64kb (12bit), segmentas padalintas á FFh puslapius.
-Segmentø lentelës áraðas yra 2 baitø, ið kuriø paskutiniai 12 bitø naudojami realaus segmento nr. saugojimui. Puslapiø lentelës áraðas yra 1 baito, kuriame saugojamas realaus psl. nr. 
-Vykdomo programos duomenø segmento registro reikðmë yra 01D3h. Vykdoma komanda PD14AC2. Atmintis uþpildyta pagal formulæ f(AA) = (AA+2) mod 100h;
-Kokia reikðmë bus iðvesta á ekranà?
+2. VA erdv?s dydis 4GB (32bit). Segmento dydis yra 1mb (20bit), VA organizuota polisegmentin?s atminties principu ir yra padalinta ? FFFh segmentus.
+STR = A01h, kuris rei?kia segmento numer?, nuo kurio prasideda segment¸ lentel?. Puslapio dydis yra 64kb (12bit), segmentas padalintas ? FFh puslapius.
+Segment¸ lentel?s ?ra?as yra 2 bait¸, i? kuri¸ paskutiniai 12 bit¸ naudojami realaus segmento nr. saugojimui. Puslapi¸ lentel?s ?ra?as yra 1 baito, kuriame saugojamas realaus psl. nr. 
+Vykdomo programos duomen¸ segmento registro reik?m? yra 01D3h. Vykdoma komanda PD14AC2. Atmintis u?pildyta pagal formul¿ f(AA) = (AA+2) mod 100h;
+Kokia reik?m? bus i?vesta ? ekran??
 
 
 Prie A01 prijungiam 00000. 00000 - segmento dydis. 
-01D3 - DS reikðmë. 
-* 2 yra 2 baitai (DS áraðas).
+01D3 - DS reik?m?. 
+* 2 yra 2 baitai (DS ?ra?as).
 
 A0100000 + 01D3 * 2 = A01003A6
 
-Radome adresà á làstelës, kuriose saugoma nuoroda á puslapiø lentelæ.
+Radome adres? ? l?stel?s, kuriose saugoma nuoroda ? puslapi¸ lentel¿.
 
-Gaunam tà nuorodà ásistatæ adresus á formulæ. 
-(P.S. Èia imam tà A01003A6 ir A01003A7, t.y. vienetu didesná, nes atseit, kadangi FFh, tai dviejø adresø reikia (nes dvi F), bet èia tik man taip aiðkino :))
+Gaunam t? nuorod? ?sistat¿ adresus ? formul¿. 
+(P.S. ?ia imam t? A01003A6 ir A01003A7, t.y. vienetu didesn?, nes atseit, kadangi FFh, tai dviej¸ adres¸ reikia (nes dvi F), bet ?ia tik man taip ai?kino :))
 
 f(A01003A6) = (A01003A6 + 2) mod 100h = A8
 f(A01003A7) = (A01003A7 + 2) mod 100h = A9
 
-(a)Adresas á puslapiø lentelæ A8A9 -> 8A9 
-!!! imam tris paskutinius skaièius, t.y. 8A9, o ne visà. kodël? neþinau. 
+(a)Adresas ? puslapi¸ lentel¿ A8A9 -> 8A9 
+!!! imam tris paskutinius skai?ius, t.y. 8A9, o ne vis?. kod?l? ne?inau. 
 
 Toliau: 
-(b)Imame puslapiø lentelës adresà ir pridedam 14A (èia ið PD14AC2), nes jis nurodo vietà, kur saugomi realaus bloko adresai.
+(b)Imame puslapi¸ lentel?s adres? ir pridedam 14A (?ia i? PD14AC2), nes jis nurodo viet?, kur saugomi realaus bloko adresai.
 
  
-Gaunasi ið (a) bei (b): 8A90014A 
-Tuos nulius reikia priraðyti, kad gautøsi 8 baitai. 
+Gaunasi i? (a) bei (b): 8A90014A 
+Tuos nulius reikia prira?yti, kad gaut¸si 8 baitai. 
 
-Randam realø blokà: f(8A90014A) = (8A90014A + 2) mod 100h = 4C.
+Randam real¸ blok?: f(8A90014A) = (8A90014A + 2) mod 100h = 4C.
 
-Èia bibiþin kas bûna, bet sudëlioji visas dalis taip: 8A904CC2 (dalimis reikia þiûrët taip - 8A9 04C C2)
+?ia bibi?in kas b?na, bet sud?lioji visas dalis taip: 8A904CC2 (dalimis reikia ?i?r?t taip - 8A9 04C C2)
 
-Tada ásistatom: f(8A904CC2) = C4;
+Tada ?sistatom: f(8A904CC2) = C4;
 
 Ats.: C4;
 
@@ -119,11 +119,11 @@ RAM f(AA) = (AA + 5) mod 20
 Vykdoma komanda PD49
 Rasti kas bus atspausdinta. 
 
-Imam ið PTR'o paskutinius du skaièius visada, t.y. 26 ðiuo atveju.
-Dauginam irgi VISADA ið 10, gaunasi 260.
-ásistatom á funkcijà: f(260) = (260+5) mod 20 = 5
+Imam i? PTR'o paskutinius du skai?ius visada, t.y. 26 ?iuo atveju.
+Dauginam irgi VISADA i? 10, gaunasi 260.
+?sistatom ? funkcij?: f(260) = (260+5) mod 20 = 5
 
-ámam 260 ir tà 5 ir pasidarom atminties, ahem, "atvaizdà":
+?mam 260 ir t? 5 ir pasidarom atminties, ahem, "atvaizd?":
 
 260 5
 261 6
@@ -137,11 +137,11 @@ Dauginam irgi VISADA ið 10, gaunasi 260.
 269 14
 270 15
 
-Þiûrim á PD49.
-Ketvertà pridedam prie 260 ir þiûrim á 264-à vietà. Ten yra reikðmë 9.
-Imam ðità devynetà IR ið PD49 likusá antrà skaièiø - 9 ir sujungiam.
+?i?rim ? PD49.
+Ketvert? pridedam prie 260 ir ?i?rim ? 264-? viet?. Ten yra reik?m? 9.
+Imam ?it? devynet? IR i? PD49 likus? antr? skai?i¸ - 9 ir sujungiam.
 Gaunasi 99.
-Èia AA (absoliutus adresas), jei neklystu.
+?ia AA (absoliutus adresas), jei neklystu.
 
 O mums reikia rast, kas bus atspausdinta. 
 Darom: f(99) = (99+5) mod 20  = 4;
