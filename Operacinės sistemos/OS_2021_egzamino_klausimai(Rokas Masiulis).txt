@@ -1,0 +1,11 @@
+Prašau apibūdinti kas yra multiprogramavimas, kokia jos paskirtis, galima pateikti apibrėžimą.
+Prašau apibūdinti kas yra virtuali atmintis. Pagalbiniai klausymai: kokia jos paskirtis, kokios sąvybės, kam ji reikalinga. Galima pateikti apibrėžimą.
+Prašau apibūdinti kas yra lygiagretūs procesai. Pagalbiniai klausymai: kokia jų paskirtis, kokios sąvybės, ką jie daro, kodėl jų reikia, ką atlieka. Galima pateikti apibrėžimą.
+Prašau apibūdinti kas yra procesas. Pagalbiniai klausymai: kokia jo paskirtis, kokios sąvybės. Galima pateikti apibrėžimą.
+Prašau apibūdinti kas yra mikrobranduolio architektūra. Pagalbiniai klausymai: kokia jos paskirtis, kokios sąvybės. Kuo skiriasi nuo monolitinio branduolio architektūros. Galima pateikti apibrėžimą.
+Prašau apibūdinti kas yra procesų planuotojas. Pateikti, paaiškinti algoritmą. Pagalbiniai klausymai: kokia jo paskirtis, kokios sąvybės, ką jis daro, kodėl jo reikia, ką atlieka.
+Prašau apibūdinti operacinių sistemų kategorijas.
+Prašau apibūdinti kas yra kritinė sekcija. Pagalbiniai klausymai: kokia jos paskirtis, kokios sąvybės, ką ji daro, kodėl jos reikia, ką atlieka. Prašau pateikti pavyzdžių, taikymo atvejį. Galima pateikti apibrėžimą.
+Atminties skirstymo puslapiais strategijos
+Failų sistemos sąvoka
+Neaktyvaus procesoriaus radimas. Pateikti veikimo algoritmą
